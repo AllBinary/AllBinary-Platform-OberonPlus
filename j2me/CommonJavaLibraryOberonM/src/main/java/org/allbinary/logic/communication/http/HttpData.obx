@@ -1,0 +1,51 @@
+(* Generated Code Do Not Modify package org.allbinary.logic.communication.http *)
+MODULE HttpData;
+
+IMPORT JR, CommonSeps;
+
+TYPE
+  HttpData* = POINTER TO RECORD (JR.JObject)
+    f_EQUALS*: JR.String
+    f_PARAM_SEP*: JR.String
+    f_URL_PARAM_SEP*: JR.String
+    f_URL_LABEL*: JR.String
+  END
+
+VAR
+  jcell_instance: HttpData
+  jset_instance: BOOLEAN
+
+PROCEDURE jstatic_instance*(): HttpData;
+BEGIN
+    IF ~jset_instance THEN
+      jset_instance := TRUE
+      jcell_instance := jnew_0()
+    END
+    RETURN jcell_instance
+END jstatic_instance;
+
+PROCEDURE jnew_0*(): HttpData;
+  VAR
+    this: HttpData
+    j_commonSeps: CommonSeps.CommonSeps
+BEGIN
+    NEW(this)
+    this.jclass := JR.str("HttpData")
+    
+    
+    
+    this.f_URL_LABEL := JR.str("Url: ")
+        j_commonSeps := CommonSeps.jm_getInstance_0()
+        this.f_EQUALS := j_commonSeps.f_EQUALS
+        this.f_PARAM_SEP := j_commonSeps.f_AMPERSAND
+        this.f_URL_PARAM_SEP := j_commonSeps.f_QUESTION
+    RETURN this
+END jnew_0;
+
+PROCEDURE jm_getInstance_0*(): HttpData;
+BEGIN
+        RETURN jstatic_instance()
+END jm_getInstance_0;
+
+END HttpData.
+

@@ -1,0 +1,56 @@
+(* Generated Code Do Not Modify package org.allbinary.logic *)
+MODULE ABSystemWrapper;
+
+IMPORT JR;
+
+TYPE
+  ABSystemWrapper* = POINTER TO RECORD (JR.JObject)
+  END
+
+VAR
+  jcell_instance: ABSystemWrapper
+  jset_instance: BOOLEAN
+
+PROCEDURE jstatic_instance*(): ABSystemWrapper;
+BEGIN
+    IF ~jset_instance THEN
+      jset_instance := TRUE
+      jcell_instance := jnew_0()
+    END
+    RETURN jcell_instance
+END jstatic_instance;
+
+PROCEDURE jnew_0*(): ABSystemWrapper;
+  VAR
+    this: ABSystemWrapper
+BEGIN
+    NEW(this)
+    this.jclass := JR.str("ABSystemWrapper")
+    RETURN this
+END jnew_0;
+
+PROCEDURE jm_getInstance_0*(): ABSystemWrapper;
+BEGIN
+        RETURN jstatic_instance()
+END jm_getInstance_0;
+
+PROCEDURE (this: ABSystemWrapper) jm_arraycopy_5*(j_src: JR.JObject; j_srcPos: INT32; j_dest: JR.JObject; j_destPos: INT32; j_length: INT32);
+  VAR
+    jdiscardRef: JR.JObject
+    jdiscardString: JR.String
+    jdiscardInt: INT32
+    jdiscardLong: INT64
+    jdiscardFloat: REAL
+    jdiscardDouble: LONGREAL
+    jdiscardBoolean: BOOLEAN
+BEGIN
+        JR.arraycopyObject(j_src, j_srcPos, j_dest, j_destPos, j_length)
+END jm_arraycopy_5;
+
+PROCEDURE (this: ABSystemWrapper) jm_currentTimeMillis_0*(): INT64;
+BEGIN
+        RETURN JR.currentTimeMillis()
+END jm_currentTimeMillis_0;
+
+END ABSystemWrapper.
+

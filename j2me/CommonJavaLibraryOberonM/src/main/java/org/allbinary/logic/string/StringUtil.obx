@@ -1,0 +1,88 @@
+(* Generated Code Do Not Modify package org.allbinary.logic.string *)
+MODULE StringUtil;
+
+IMPORT JR;
+
+TYPE
+  StringUtil* = POINTER TO RECORD (JR.JObject)
+    f_INIT_STRING*: JR.String
+    f_NULL_STRING*: JR.String
+    f_EMPTY_STRING*: JR.String
+    f_ONE_EMPTY_STRING_ARRAY*: JR.StringArray
+    f_ONE_EMPTY_STRING_ARRAY_OF_ARRAYS*: JR.StringArray2
+    f_stringArray*: JR.StringArray
+  END
+
+VAR
+  jcell_instance: StringUtil
+  jset_instance: BOOLEAN
+
+PROCEDURE jstatic_instance*(): StringUtil;
+BEGIN
+    IF ~jset_instance THEN
+      jset_instance := TRUE
+      jcell_instance := jnew_0()
+    END
+    RETURN jcell_instance
+END jstatic_instance;
+
+PROCEDURE jnew_0*(): StringUtil;
+  VAR
+    this: StringUtil
+BEGIN
+    NEW(this)
+    this.jclass := JR.str("StringUtil")
+    this.f_INIT_STRING := JR.str("")
+    this.f_NULL_STRING := JR.str("null")
+    this.f_EMPTY_STRING := JR.str("")
+    this.f_ONE_EMPTY_STRING_ARRAY := JR.stringArray1(this.f_EMPTY_STRING)
+    this.f_ONE_EMPTY_STRING_ARRAY_OF_ARRAYS := JR.newStringArray2(0, 0)
+    this.f_stringArray := JR.newStringArray(0)
+    RETURN this
+END jnew_0;
+
+PROCEDURE jm_getInstance_0*(): StringUtil;
+BEGIN
+        RETURN jstatic_instance()
+END jm_getInstance_0;
+
+PROCEDURE (this: StringUtil) jm_getNonNull_1*(j_string: JR.String): JR.String;
+BEGIN
+        RETURN j_string
+END jm_getNonNull_1;
+
+PROCEDURE (this: StringUtil) jm_getArrayInstance_0*(): JR.StringArray;
+BEGIN
+        RETURN this.f_stringArray
+END jm_getArrayInstance_0;
+
+PROCEDURE (this: StringUtil) jm_count_2*(j_string: JR.String; j_aChar: INT32): INT32;
+  VAR
+    j_count: INT32
+    j_size: INT32
+    j_index: INT32
+BEGIN
+        j_count := 0
+        j_size := JR.stringLength(j_string)
+        j_index := 0
+        WHILE (j_index < j_size) DO
+            IF (JR.charAt(j_string, j_index) = j_aChar) THEN
+                INC(j_count)
+            END
+            INC(j_index)
+        END
+        RETURN j_count
+END jm_count_2;
+
+PROCEDURE (this: StringUtil) jm_toString_1*(j_anyType: JR.JObject): JR.String;
+BEGIN
+        IF (j_anyType # NIL) THEN
+            RETURN JR.toString(j_anyType)
+        ELSE
+            RETURN this.f_NULL_STRING
+        END
+    RETURN NIL
+END jm_toString_1;
+
+END StringUtil.
+

@@ -1,0 +1,142 @@
+(* Generated Code Do Not Modify package org.allbinary.string *)
+MODULE CommonStrings;
+
+IMPORT JR;
+
+TYPE
+  CommonStrings* = POINTER TO RECORD (JR.JObject)
+    f_EMPTY*: JR.String
+    f_CREATE_IMAGE*: JR.String
+    f_PLEASE_WAIT*: JR.String
+    f_PLEASE_WAIT_FOR_SERVER*: JR.String
+    f_PERIODS*: JR.String
+    f_LOADING*: JR.String
+    f_CONSTRUCTOR*: JR.String
+    f_START*: JR.String
+    f_END*: JR.String
+    f_EXCEPTION*: JR.String
+    f_EXCEPTION_LABEL*: JR.String
+    f_CLEANUP*: JR.String
+    f_INIT*: JR.String
+    f_CLOSE*: JR.String
+    f_UP*: JR.String
+    f_DOWN*: JR.String
+    f_LEFT*: JR.String
+    f_RIGHT*: JR.String
+    f_DIRECTION_NAME*: JR.StringArray
+    f_CREATE*: JR.String
+    f_REMOVE*: JR.String
+    f_UPDATE*: JR.String
+    f_DELETE*: JR.String
+    f_delete*: JR.String
+    f_LOAD*: JR.String
+    f_SAVE*: JR.String
+    f_ADD*: JR.String
+    f_DROP*: JR.String
+    f_INSERT*: JR.String
+    f_VISIT*: JR.String
+    f_START_METHOD_NAME*: JR.String
+    f_END_METHOD_NAME*: JR.String
+    f_GET*: JR.String
+    f_PROCESS*: JR.String
+    f_GET_INSTANCE*: JR.String
+    f_GET_LIST*: JR.String
+    f_RUN*: JR.String
+    f_START_RUNNABLE*: JR.String
+    f_RUNNING*: JR.String
+    f_END_RUNNABLE*: JR.String
+    f_DISABLE*: JR.String
+    f_ENABLE*: JR.String
+    f_SUCCESS*: JR.String
+    f_FAILURE*: JR.String
+    f_NOT_IMPLEMENTED*: JR.String
+    f_UNKNOWN*: JR.String
+    f_ON_EVENT*: JR.String
+    f_IS_VALID*: JR.String
+    f_TOSTRING*: JR.String
+    f_ADD_LISTENER*: JR.String
+    f_REMOVE_LISTENER*: JR.String
+    f_SIZE*: JR.String
+  END
+
+VAR
+  jcell_instance: CommonStrings
+  jset_instance: BOOLEAN
+
+PROCEDURE jstatic_instance*(): CommonStrings;
+BEGIN
+    IF ~jset_instance THEN
+      jset_instance := TRUE
+      jcell_instance := jnew_0()
+    END
+    RETURN jcell_instance
+END jstatic_instance;
+
+PROCEDURE jnew_0*(): CommonStrings;
+  VAR
+    this: CommonStrings
+BEGIN
+    NEW(this)
+    this.jclass := JR.str("CommonStrings")
+    this.f_EMPTY := JR.str("Empty")
+    this.f_CREATE_IMAGE := JR.str("createImage")
+    this.f_PLEASE_WAIT := JR.str("Please Wait")
+    this.f_PLEASE_WAIT_FOR_SERVER := JR.str("Please Wait Getting Data From Server...")
+    this.f_PERIODS := JR.str("...")
+    this.f_LOADING := JR.str("Loading...")
+    this.f_CONSTRUCTOR := JR.str("Constructor")
+    this.f_START := JR.str("Start")
+    this.f_END := JR.str("End")
+    this.f_EXCEPTION := JR.str("Exception")
+    this.f_EXCEPTION_LABEL := JR.str("Exception: ")
+    this.f_CLEANUP := JR.str("cleanup")
+    this.f_INIT := JR.str("init")
+    this.f_CLOSE := JR.str("close")
+    this.f_UP := JR.str("up")
+    this.f_DOWN := JR.str("down")
+    this.f_LEFT := JR.str("left")
+    this.f_RIGHT := JR.str("right")
+    this.f_DIRECTION_NAME := JR.stringArray4(this.f_DOWN, this.f_LEFT, this.f_RIGHT, this.f_UP)
+    this.f_CREATE := JR.str("Create")
+    this.f_REMOVE := JR.str("Remove")
+    this.f_UPDATE := JR.str("Update")
+    this.f_DELETE := JR.str("Delete")
+    this.f_delete := JR.str("delete")
+    this.f_LOAD := JR.str("load")
+    this.f_SAVE := JR.str("save")
+    this.f_ADD := JR.str("Add")
+    this.f_DROP := JR.str("Drop")
+    this.f_INSERT := JR.str("Insert")
+    this.f_VISIT := JR.str("visit")
+    this.f_START_METHOD_NAME := this.f_START
+    this.f_END_METHOD_NAME := JR.str("end")
+    this.f_GET := JR.str("get")
+    this.f_PROCESS := JR.str("process")
+    this.f_GET_INSTANCE := JR.str("getInstance")
+    this.f_GET_LIST := JR.str("getList")
+    this.f_RUN := JR.str("run")
+    this.f_START_RUNNABLE := JR.str("Start Runnable")
+    this.f_RUNNING := JR.str("Running")
+    this.f_END_RUNNABLE := JR.str("End Runnable")
+    this.f_DISABLE := JR.str("disable")
+    this.f_ENABLE := JR.str("enable")
+    this.f_SUCCESS := JR.str("Command Success")
+    this.f_FAILURE := JR.str("Command Failed")
+    this.f_NOT_IMPLEMENTED := JR.str("Not Implemented")
+    this.f_UNKNOWN := JR.str("Unknown")
+    this.f_ON_EVENT := JR.str("onEvent")
+    this.f_IS_VALID := JR.str("isValid")
+    this.f_TOSTRING := JR.str("toString")
+    this.f_ADD_LISTENER := JR.str("addListener")
+    this.f_REMOVE_LISTENER := JR.str("removeListener")
+    this.f_SIZE := JR.str("size")
+    RETURN this
+END jnew_0;
+
+PROCEDURE jm_getInstance_0*(): CommonStrings;
+BEGIN
+        RETURN jstatic_instance()
+END jm_getInstance_0;
+
+END CommonStrings.
+

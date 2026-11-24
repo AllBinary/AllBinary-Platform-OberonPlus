@@ -1,0 +1,256 @@
+(* Generated Code Do Not Modify package org.allbinary.logic.string *)
+MODULE StringMaker;
+
+IMPORT JR;
+
+TYPE
+  StringMaker* = POINTER TO RECORD (JR.JObject)
+    f_charArray*: JR.IntArray
+    f_currentLength*: INT32
+  END
+
+PROCEDURE jnew_0*(): StringMaker;
+  VAR
+    this: StringMaker
+BEGIN
+    NEW(this)
+    this.jclass := JR.str("StringMaker")
+    
+    
+        this.f_charArray := JR.newIntArray(20)
+    RETURN this
+END jnew_0;
+
+PROCEDURE (this: StringMaker) jm_append_1*(j_string: JR.String): StringMaker;
+  VAR
+    j_stringLength: INT32
+    jdiscardRef: JR.JObject
+    jdiscardString: JR.String
+    jdiscardInt: INT32
+    jdiscardLong: INT64
+    jdiscardFloat: REAL
+    jdiscardDouble: LONGREAL
+    jdiscardBoolean: BOOLEAN
+BEGIN
+        j_stringLength := JR.stringLength(j_string)
+        this.jm_ensureCapacity_1((this.f_currentLength + j_stringLength))
+        JR.getChars(j_string, 0, j_stringLength, this.f_charArray, this.f_currentLength)
+        this.f_currentLength := (this.f_currentLength + j_stringLength)
+        RETURN this
+END jm_append_1;
+
+PROCEDURE (this: StringMaker) jm_appendchar_1*(j_c: INT32): StringMaker;
+  VAR
+    jtemp1: INT32
+    jdiscardRef: JR.JObject
+    jdiscardString: JR.String
+    jdiscardInt: INT32
+    jdiscardLong: INT64
+    jdiscardFloat: REAL
+    jdiscardDouble: LONGREAL
+    jdiscardBoolean: BOOLEAN
+BEGIN
+        this.jm_ensureCapacity_1((this.f_currentLength + 1))
+        jtemp1 := this.f_currentLength
+        INC(this.f_currentLength)
+        this.f_charArray[jtemp1] := j_c
+        RETURN this
+END jm_appendchar_1;
+
+PROCEDURE (this: StringMaker) jm_appendCharArray_3*(j_charArray: JR.IntArray; j_start: INT32; j_end: INT32): StringMaker;
+  VAR
+    j_index: INT32
+    jtemp2: INT32
+    jdiscardRef: JR.JObject
+    jdiscardString: JR.String
+    jdiscardInt: INT32
+    jdiscardLong: INT64
+    jdiscardFloat: REAL
+    jdiscardDouble: LONGREAL
+    jdiscardBoolean: BOOLEAN
+BEGIN
+        this.jm_ensureCapacity_1((this.f_currentLength + ((j_end - j_start))))
+        j_index := j_start
+        WHILE (j_index < j_end) DO
+            jtemp2 := this.f_currentLength
+            INC(this.f_currentLength)
+            this.f_charArray[jtemp2] := j_charArray[j_index]
+            INC(j_index)
+        END
+        RETURN this
+END jm_appendCharArray_3;
+
+PROCEDURE (this: StringMaker) jm_appendbyte_1*(j_b: INT32): StringMaker;
+  VAR
+    jdiscardRef: JR.JObject
+    jdiscardString: JR.String
+    jdiscardInt: INT32
+    jdiscardLong: INT64
+    jdiscardFloat: REAL
+    jdiscardDouble: LONGREAL
+    jdiscardBoolean: BOOLEAN
+BEGIN
+        jdiscardRef := this.jm_append_1(JR.intString(j_b))
+        RETURN this
+END jm_appendbyte_1;
+
+PROCEDURE (this: StringMaker) jm_appendshort_1*(j_b: INT32): StringMaker;
+  VAR
+    jdiscardRef: JR.JObject
+    jdiscardString: JR.String
+    jdiscardInt: INT32
+    jdiscardLong: INT64
+    jdiscardFloat: REAL
+    jdiscardDouble: LONGREAL
+    jdiscardBoolean: BOOLEAN
+BEGIN
+        jdiscardRef := this.jm_append_1(JR.intString(j_b))
+        RETURN this
+END jm_appendshort_1;
+
+PROCEDURE (this: StringMaker) jm_appendint_1*(j_i: INT32): StringMaker;
+  VAR
+    jdiscardRef: JR.JObject
+    jdiscardString: JR.String
+    jdiscardInt: INT32
+    jdiscardLong: INT64
+    jdiscardFloat: REAL
+    jdiscardDouble: LONGREAL
+    jdiscardBoolean: BOOLEAN
+BEGIN
+        jdiscardRef := this.jm_append_1(JR.intString(j_i))
+        RETURN this
+END jm_appendint_1;
+
+PROCEDURE (this: StringMaker) jm_appendlong_1*(j_l: INT64): StringMaker;
+  VAR
+    jdiscardRef: JR.JObject
+    jdiscardString: JR.String
+    jdiscardInt: INT32
+    jdiscardLong: INT64
+    jdiscardFloat: REAL
+    jdiscardDouble: LONGREAL
+    jdiscardBoolean: BOOLEAN
+BEGIN
+        jdiscardRef := this.jm_append_1(JR.longString(j_l))
+        RETURN this
+END jm_appendlong_1;
+
+PROCEDURE (this: StringMaker) jm_appendfloat_1*(j_f: REAL): StringMaker;
+  VAR
+    jdiscardRef: JR.JObject
+    jdiscardString: JR.String
+    jdiscardInt: INT32
+    jdiscardLong: INT64
+    jdiscardFloat: REAL
+    jdiscardDouble: LONGREAL
+    jdiscardBoolean: BOOLEAN
+BEGIN
+        jdiscardRef := this.jm_append_1(JR.floatString(j_f))
+        RETURN this
+END jm_appendfloat_1;
+
+PROCEDURE (this: StringMaker) jm_appendboolean_1*(j_bool: BOOLEAN): StringMaker;
+  VAR
+    jtemp3: INT32
+    jtemp4: INT32
+    jtemp5: INT32
+    jtemp6: INT32
+    jtemp7: INT32
+    jtemp8: INT32
+    jtemp9: INT32
+    jtemp10: INT32
+    jtemp11: INT32
+    jdiscardRef: JR.JObject
+    jdiscardString: JR.String
+    jdiscardInt: INT32
+    jdiscardLong: INT64
+    jdiscardFloat: REAL
+    jdiscardDouble: LONGREAL
+    jdiscardBoolean: BOOLEAN
+BEGIN
+        IF j_bool THEN
+            this.jm_ensureCapacity_1((this.f_currentLength + 4))
+            jtemp8 := this.f_currentLength
+            INC(this.f_currentLength)
+            this.f_charArray[jtemp8] := ORD("t")
+            jtemp9 := this.f_currentLength
+            INC(this.f_currentLength)
+            this.f_charArray[jtemp9] := ORD("r")
+            jtemp10 := this.f_currentLength
+            INC(this.f_currentLength)
+            this.f_charArray[jtemp10] := ORD("u")
+            jtemp11 := this.f_currentLength
+            INC(this.f_currentLength)
+            this.f_charArray[jtemp11] := ORD("e")
+        ELSE
+            this.jm_ensureCapacity_1((this.f_currentLength + 5))
+            jtemp3 := this.f_currentLength
+            INC(this.f_currentLength)
+            this.f_charArray[jtemp3] := ORD("f")
+            jtemp4 := this.f_currentLength
+            INC(this.f_currentLength)
+            this.f_charArray[jtemp4] := ORD("a")
+            jtemp5 := this.f_currentLength
+            INC(this.f_currentLength)
+            this.f_charArray[jtemp5] := ORD("l")
+            jtemp6 := this.f_currentLength
+            INC(this.f_currentLength)
+            this.f_charArray[jtemp6] := ORD("s")
+            jtemp7 := this.f_currentLength
+            INC(this.f_currentLength)
+            this.f_charArray[jtemp7] := ORD("e")
+        END
+        RETURN this
+END jm_appendboolean_1;
+
+PROCEDURE (this: StringMaker) jm_ensureCapacity_1*(j_minSize: INT32);
+  VAR
+    j_oldCapacity: INT32
+    j_newCapacity: INT32
+    j_copy: JR.IntArray
+    j_min: INT32
+    jdiscardRef: JR.JObject
+    jdiscardString: JR.String
+    jdiscardInt: INT32
+    jdiscardLong: INT64
+    jdiscardFloat: REAL
+    jdiscardDouble: LONGREAL
+    jdiscardBoolean: BOOLEAN
+BEGIN
+        j_oldCapacity := LEN(this.f_charArray^)
+        IF (j_minSize > j_oldCapacity) THEN
+            j_newCapacity := (j_oldCapacity * 3)
+            IF (j_newCapacity < j_minSize) THEN
+                j_newCapacity := j_minSize
+            END
+            j_copy := JR.newIntArray(j_newCapacity)
+            j_min := this.jm_min_2(LEN(this.f_charArray^), j_newCapacity)
+            JR.arraycopyInt(this.f_charArray, 0, j_copy, 0, j_min)
+            this.f_charArray := j_copy
+        END
+END jm_ensureCapacity_1;
+
+PROCEDURE (this: StringMaker) jm_min_2*(j_value: INT32; j_value2: INT32): INT32;
+BEGIN
+        RETURN JR.iifInt(((j_value <= j_value2)), j_value, j_value2)
+END jm_min_2;
+
+PROCEDURE (this: StringMaker) jm_delete_2*(j_start: INT32; j_end: INT32): StringMaker;
+BEGIN
+        this.f_currentLength := (this.f_currentLength - ((j_end - j_start)))
+        RETURN this
+END jm_delete_2;
+
+PROCEDURE (this: StringMaker) jm_length_0*(): INT32;
+BEGIN
+        RETURN this.f_currentLength
+END jm_length_0;
+
+PROCEDURE (this: StringMaker) jm_toString_0*(): JR.String;
+BEGIN
+        RETURN JR.fromChars(this.f_charArray, 0, this.f_currentLength)
+END jm_toString_0;
+
+END StringMaker.
+

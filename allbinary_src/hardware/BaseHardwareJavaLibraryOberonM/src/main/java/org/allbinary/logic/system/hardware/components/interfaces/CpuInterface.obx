@@ -1,0 +1,52 @@
+{
+
+  AllBinary Open License Version 1
+  Copyright (c) 2011 AllBinary
+  
+  By agreeing to this license you and any business entity you represent are
+  legally bound to the AllBinary Open License Version 1 legal agreement.
+  
+  You may obtain the AllBinary Open License Version 1 legal agreement from
+  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+  
+  Created By: Travis Berthelot
+   
+}
+// Generated Code Do Not Modify
+// package org.allbinary.logic.system.hardware.components.interfaces
+unit CpuInterface;
+
+{$mode delphi}{$H+}
+{$interfaces corba}
+{$modeswitch typehelpers}
+
+interface
+
+uses
+  SysUtils, Classes, Math, DateUtils, StrUtils, Character, JavaLang, JavaUtil, JavaIo, JavaNio, JavaAwtEvent, JavaNet, JavaSecurity, JavaxCrypto;
+
+type
+  {AB:TYPES}
+  ICpuInterface = interface(IJavaObject) ['ICpuInterface']
+        function getProcessor: string;
+        function getVendorId: string;
+        function getCpuFamily: string;
+        function getModel: string;
+        function getModelName: string;
+        function getStepping: string;
+        function getCpuSpeed: string;
+        function getCacheSize: string;
+        function compareTo(cpuInterface_: ICpuInterface): Boolean;
+  end;
+  TCpuInterface = ICpuInterface;
+
+implementation
+
+{AB:CODE}
+
+initialization
+  {AB:INITIALIZATION}
+  {AB:END}
+
+end.
+

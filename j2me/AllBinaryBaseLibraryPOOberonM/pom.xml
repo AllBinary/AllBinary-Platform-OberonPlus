@@ -1,0 +1,88 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.allbinary</groupId>
+    <artifactId>AllBinaryBaseLibraryPOMOberon</artifactId>
+    <packaging>pom</packaging>
+    <!-- AllBinary Platform Version Start -->
+    <version>1.0.0-SNAPSHOT</version>
+    <!-- AllBinary Platform Version End -->
+
+    <name>AllBinaryBaseLibraryPOMOberon</name>
+    <url>http://www.allbinary.com/</url>
+    <distributionManagement>
+        <snapshotRepository>
+            <id>nexus-snapshots</id>
+            <name>AllBinary Snapshots Nexus</name>
+            <url>https://nexus-allbinary.rhcloud.com/nexus/content/repositories/snapshots/</url>
+        </snapshotRepository>
+        <repository>
+            <id>nexus-releases</id>
+            <name>AllBinary Releases Nexus</name>
+            <url>https://nexus-allbinary.rhcloud.com/nexus/content/repositories/releases/</url>
+        </repository>
+    </distributionManagement>
+    
+    <properties>
+        <buildLabel>${project.version}</buildLabel>
+        <assemblyPluginVersion>2.2-beta-1</assemblyPluginVersion>
+    </properties>
+
+    <modules>
+        <module>../CommonJavaLibraryOberonM</module>
+        <module>../TempBaseJavaLibraryOberonM</module>
+        
+        <module>../../allbinary_src/LogOberonM</module>
+        <module>../../allbinary_src/allbinary_src_designpatterns_srcOberonM</module>
+        <module>../../allbinary_src/data/BaseDataJavaLibraryOberonM</module>
+        <module>../../allbinary_src/cache/BaseCacheJavaLibraryOberonM</module>
+        <module>../../allbinary_src/logic/BasePreloaderJavaLibraryOberonM</module>
+        <module>../../allbinary_src/logic/BasePreloaderJ2MEJavaLibraryOberonM</module>
+
+        <module>../ExceptionHTMLJavaLibraryOberonM</module>
+        <module>../J2MEExceptionLibraryOberonM</module>
+        <module>../../allbinary_src/J2SEExceptionLibraryOberonM</module>
+        <module>../J2MEUtilJavaLibraryOberonM</module>
+        <module>../J2MEColorJavaLibraryOberonM</module>
+        <module>../EventJ2MELibraryOberonM</module>
+
+        <module>../../allbinary_src/LogNoPlatformJavaLibraryOberonM</module>
+        <module>../../allbinary_src/LogJ2MEJavaLibraryOberonM</module>
+        <module>../../allbinary_src/LogJ2SEJavaLibraryOberonM</module>
+        <!--<module>../../allbinary_src/LogAndroidJavaLibraryOberonM</module>-->
+        <module>../logging/LoggingNoneOberonM</module>
+        <module>../logging/LoggingJ2MEAllOberonM</module>
+        <module>../logging/LoggingJ2MEExceptionOberonM</module>
+        <!--<module>../logging/LoggingAndroidAllOberonM</module>-->
+        <!--
+        //While it is a possible dependency option it really does not fit here
+        //as such it is actually build in the final POM builds instead
+        <module>../logging/LoggingRemoteExceptionOberonM</module>  
+        -->
+        
+        <module>../J2MEWindowingJavaLibraryOberonM</module>
+        
+        <module>../lib/BaseMathLibraryOberonM</module>
+        <module>../lib/BasicMathLibraryOberonM</module>
+        
+        <module>../../allbinary_src/ThreadLibraryOberonM</module>
+        <!--<module>../../allbinary_src/ThreadHTMLLibraryOberonM</module>-->
+        <module>../../replace_these_stub_projects/allbinary_src/NoneOnlyJavaLibraryOberonM</module>
+        <module>../../allbinary_src/ThreadJ2MELibraryOberonM</module>
+        <module>../time/TimeJavaLibraryOberonM</module>
+
+        <module>../statistics/ApplicationStatisticsJ2SELibraryOberonM</module>
+        <module>../statistics/ApplicationStatisticsJ2MELibraryOberonM</module>
+        <module>../statistics/ApplicationStatisticsJavaLibraryOberonM</module>
+
+        <module>../../allbinary_src/logging/BasicLogConfigTypeJavaLibraryOberonM</module>
+        <module>../../allbinary_src/logging/LogConfigTypeGameClientJavaLibraryOberonM</module>
+
+        <module>../../allbinary_src/hardware/HardwareLibraryPOOberonM</module>
+
+        <module>../lib/TrigBaseLibraryOberonM</module>
+
+    </modules>
+
+</project>
+

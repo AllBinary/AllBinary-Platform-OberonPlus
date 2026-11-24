@@ -1,0 +1,72 @@
+(* Generated Code Do Not Modify package org.allbinary.string *)
+MODULE CommonPhoneStrings;
+
+IMPORT JR;
+
+TYPE
+  CommonPhoneStrings* = POINTER TO RECORD (JR.JObject)
+    f_UP*: JR.String
+    f_DOWN*: JR.String
+    f_LEFT*: JR.String
+    f_RIGHT*: JR.String
+    f_ZERO*: JR.String
+    f_ONE*: JR.String
+    f_TWO*: JR.String
+    f_THREE*: JR.String
+    f_FOUR*: JR.String
+    f_FIVE*: JR.String
+    f_SIX*: JR.String
+    f_SEVEN*: JR.String
+    f_EIGHT*: JR.String
+    f_NINE*: JR.String
+    f_POUND*: JR.String
+    f_STAR*: JR.String
+    f_FIRE*: JR.String
+  END
+
+VAR
+  jcell_instance: CommonPhoneStrings
+  jset_instance: BOOLEAN
+
+PROCEDURE jstatic_instance*(): CommonPhoneStrings;
+BEGIN
+    IF ~jset_instance THEN
+      jset_instance := TRUE
+      jcell_instance := jnew_0()
+    END
+    RETURN jcell_instance
+END jstatic_instance;
+
+PROCEDURE jnew_0*(): CommonPhoneStrings;
+  VAR
+    this: CommonPhoneStrings
+BEGIN
+    NEW(this)
+    this.jclass := JR.str("CommonPhoneStrings")
+    this.f_UP := JR.str("UP")
+    this.f_DOWN := JR.str("DOWN")
+    this.f_LEFT := JR.str("LEFT")
+    this.f_RIGHT := JR.str("RIGHT")
+    this.f_ZERO := JR.str("0")
+    this.f_ONE := JR.str("1")
+    this.f_TWO := JR.str("2")
+    this.f_THREE := JR.str("3")
+    this.f_FOUR := JR.str("4")
+    this.f_FIVE := JR.str("5")
+    this.f_SIX := JR.str("6")
+    this.f_SEVEN := JR.str("7")
+    this.f_EIGHT := JR.str("8")
+    this.f_NINE := JR.str("9")
+    this.f_POUND := JR.str("#")
+    this.f_STAR := JR.str("*")
+    this.f_FIRE := JR.str("FIRE")
+    RETURN this
+END jnew_0;
+
+PROCEDURE jm_getInstance_0*(): CommonPhoneStrings;
+BEGIN
+        RETURN jstatic_instance()
+END jm_getInstance_0;
+
+END CommonPhoneStrings.
+

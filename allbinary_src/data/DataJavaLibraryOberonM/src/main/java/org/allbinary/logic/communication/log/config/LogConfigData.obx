@@ -1,0 +1,71 @@
+{
+
+  AllBinary Open License Version 1
+  Copyright (c) 2011 AllBinary
+  
+  By agreeing to this license you and any business entity you represent are
+  legally bound to the AllBinary Open License Version 1 legal agreement.
+  
+  You may obtain the AllBinary Open License Version 1 legal agreement from
+  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+  
+  Created By: Travis Berthelot
+   
+}
+// Generated Code Do Not Modify
+// package org.allbinary.logic.communication.log.config
+unit LogConfigData;
+
+{$mode delphi}{$H+}
+{$interfaces corba}
+{$modeswitch typehelpers}
+
+interface
+
+uses
+  SysUtils, Classes, Math, DateUtils, StrUtils, Character, JavaLang, JavaUtil, JavaIo, JavaNio, JavaAwtEvent, JavaNet, JavaSecurity, JavaxCrypto;
+
+type
+  {AB:TYPES}
+  TLogConfigData = class(TObject)
+  public
+    NAME: string;
+    DESCRIPTION: string;
+    FILE_: string;
+    class var instance: TLogConfigData;
+    procedure InitFields;
+        class function getInstance: TLogConfigData; static;
+        constructor Create;
+  end;
+
+implementation
+
+{AB:CODE}
+
+procedure TLogConfigData.InitFields;
+begin
+  Self.NAME := 'LOG_CONFIG_NAME';
+  Self.DESCRIPTION := 'LOG_CONFIG_DESCRIPTION';
+  Self.FILE_ := 'LOG_CONFIG_FILE';
+end;
+    
+
+class function TLogConfigData.getInstance: TLogConfigData;
+begin
+        Exit(TLogConfigData.instance);
+end;
+    
+
+constructor TLogConfigData.Create;
+begin
+    inherited Create;
+    InitFields;
+end;
+
+initialization
+  {AB:INITIALIZATION}
+  TLogConfigData.instance := TLogConfigData.Create();
+  {AB:END}
+
+end.
+

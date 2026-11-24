@@ -1,0 +1,61 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.allbinary</groupId>
+    <artifactId>InputAutomationToolsOberon</artifactId>
+    <packaging>pom</packaging>
+    <!-- AllBinary Platform Version Start -->
+    <version>1.0.0-SNAPSHOT</version>
+    <!-- AllBinary Platform Version End -->
+
+    <name>InputAutomationToolsOberon</name>
+    <url>http://www.allbinary.com/</url>
+    <distributionManagement>
+        <snapshotRepository>
+            <id>nexus-snapshots</id>
+            <name>AllBinary Snapshots Nexus</name>
+            <url>https://nexus-allbinary.rhcloud.com/nexus/content/repositories/snapshots/</url>
+        </snapshotRepository>
+        <repository>
+            <id>nexus-releases</id>
+            <name>AllBinary Releases Nexus</name>
+            <url>https://nexus-allbinary.rhcloud.com/nexus/content/repositories/releases/</url>
+        </repository>
+    </distributionManagement>
+    
+    <properties>
+        <buildLabel>${project.version}</buildLabel>
+        <assemblyPluginVersion>2.2-beta-1</assemblyPluginVersion>
+    </properties>
+
+    <modules>
+        <!--
+        <module>../AllBinaryCoreJavaLibraryOberonM</module>        
+        -->
+
+        <module>../../replace_these_stub_projects/osgi/YourOSGIComponentLibraryOberonM</module>
+        <module>../../allbinary_src/AllBinaryOSGIJavaLibraryOberonM</module>
+
+        <module>../../graphics/ColorJavaLibraryOberonM</module>
+        <module>../../graphics/ImageJavaLibraryOberonM</module>
+        <module>../../graphics/ImageComparisonJavaLibraryOberonM</module>
+        <module>../../graphics/AdvancedImageJ2SEJavaLibraryOberonM</module>
+        
+        <module>../InputAutomationModuleJavaLibraryOberonM</module>
+        
+        <module>../InputAutomationActionScriptJavaLibraryOberonM</module>
+        <module>../InputAutomationGenericModuleJavaLibraryOberonM</module>
+        <module>../InputAutomationGeneric2ModuleJavaLibraryOberonM</module>
+
+        <module>../../allbinary_src/HelpJavaLibraryOberonM</module>
+        <module>../InputAutomationJavaLibraryOberonM</module>
+
+        <module>../InputAutomationJavaApplicationOberonM</module>
+        
+        <module>../../game/InputAutomationGameModulesJavaLibraryOberonM</module>
+        
+        <module>../AllBinaryCoreJavaLibraryOberonM</module>
+    </modules>
+
+</project>
+

@@ -1,0 +1,6 @@
+(* Generated Code Do Not Modify package jsinterop.annotations *)
+MODULE JsIgnore;
+(* Java annotation JsIgnore: annotations have no Oberon+ form *)
+
+END JsIgnore.
+

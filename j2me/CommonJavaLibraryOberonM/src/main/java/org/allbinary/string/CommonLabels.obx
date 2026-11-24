@@ -1,0 +1,68 @@
+(* Generated Code Do Not Modify package org.allbinary.string *)
+MODULE CommonLabels;
+
+IMPORT JR;
+
+TYPE
+  CommonLabels* = POINTER TO RECORD (JR.JObject)
+    f_WIDTH_LABEL*: JR.String
+    f_HEIGHT_LABEL*: JR.String
+    f_END_LABEL*: JR.String
+    f_TOTAL_LABEL*: JR.String
+    f_INDEX_LABEL*: JR.String
+    f_START_LABEL*: JR.String
+    f_COMMAND_LABEL*: JR.String
+    f_NAME_LABEL*: JR.String
+    f_START*: JR.String
+    f_ELAPSED*: JR.String
+    f_CURRENT*: JR.String
+    f_NEXT*: JR.String
+    f_ITEM_LABEL*: JR.String
+    f_RESULT_*: JR.String
+    f_COLON_SEP*: JR.String
+  END
+
+VAR
+  jcell_instance: CommonLabels
+  jset_instance: BOOLEAN
+
+PROCEDURE jstatic_instance*(): CommonLabels;
+BEGIN
+    IF ~jset_instance THEN
+      jset_instance := TRUE
+      jcell_instance := jnew_0()
+    END
+    RETURN jcell_instance
+END jstatic_instance;
+
+PROCEDURE jnew_0*(): CommonLabels;
+  VAR
+    this: CommonLabels
+BEGIN
+    NEW(this)
+    this.jclass := JR.str("CommonLabels")
+    this.f_WIDTH_LABEL := JR.str(" Width: ")
+    this.f_HEIGHT_LABEL := JR.str(" Height: ")
+    this.f_END_LABEL := JR.str("End: ")
+    this.f_TOTAL_LABEL := JR.str("Total: ")
+    this.f_INDEX_LABEL := JR.str("index: ")
+    this.f_START_LABEL := JR.str("Start: ")
+    this.f_COMMAND_LABEL := JR.str("Command: ")
+    this.f_NAME_LABEL := JR.str("Name: ")
+    this.f_START := this.f_START_LABEL
+    this.f_ELAPSED := JR.str(" Elapsed: ")
+    this.f_CURRENT := JR.str(" Current: ")
+    this.f_NEXT := JR.str("Next")
+    this.f_ITEM_LABEL := JR.str("Item: ")
+    this.f_RESULT_ := JR.str("Result: ")
+    this.f_COLON_SEP := JR.str(": ")
+    RETURN this
+END jnew_0;
+
+PROCEDURE jm_getInstance_0*(): CommonLabels;
+BEGIN
+        RETURN jstatic_instance()
+END jm_getInstance_0;
+
+END CommonLabels.
+

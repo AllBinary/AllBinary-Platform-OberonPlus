@@ -1,0 +1,54 @@
+{
+ 
+  AllBinary Open License Version 1 
+  Copyright (c) 2025 AllBinary 
+   
+  By agreeing to this license you and any business entity you represent are 
+  legally bound to the AllBinary Open License Version 1 legal agreement. 
+   
+  You may obtain the AllBinary Open License Version 1 legal agreement from 
+  AllBinary or the root directory of AllBinary's AllBinary Platform repository. 
+   
+  Created By: Travis Berthelot 
+    
+}
+// Generated Code Do Not Modify
+// package org.allbinary.thread
+unit NullThread;
+
+{$mode delphi}{$H+}
+{$interfaces corba}
+{$modeswitch typehelpers}
+
+interface
+
+uses
+  SysUtils, Classes, Math, DateUtils, StrUtils, Character, JavaLang, JavaUtil, JavaIo, JavaNio, JavaAwtEvent, JavaNet, JavaSecurity, JavaxCrypto;
+
+type
+  {AB:TYPES}
+  TNullThread = class(TObject)
+  public
+    class var NULL_THREAD: TThread;
+    constructor Create;
+  end;
+
+implementation
+uses
+  NullRunnable, StringUtil;
+
+
+{AB:CODE}
+
+constructor TNullThread.Create;
+begin
+  inherited Create;
+end;
+
+initialization
+  {AB:INITIALIZATION}
+  TNullThread.NULL_THREAD := TThread.Create(True);
+  {AB:END}
+
+end.
+

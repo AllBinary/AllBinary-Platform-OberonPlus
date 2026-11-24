@@ -1,0 +1,147 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.allbinary.business</groupId>
+    <artifactId>BlisketJavaLibraryPOberon</artifactId>
+    <packaging>pom</packaging>
+    <!-- AllBinary Platform Version Start -->
+    <version>1.0.0-SNAPSHOT</version>
+    <!-- AllBinary Platform Version End -->
+
+    <name>BlisketJavaLibraryPOberon</name>
+    <url>http://www.allbinary.com/</url>
+    <distributionManagement>
+        <snapshotRepository>
+            <id>nexus-snapshots</id>
+            <name>AllBinary Snapshots Nexus</name>
+            <url>https://nexus-allbinary.rhcloud.com/nexus/content/repositories/snapshots/</url>
+        </snapshotRepository>
+        <repository>
+            <id>nexus-releases</id>
+            <name>AllBinary Releases Nexus</name>
+            <url>https://nexus-allbinary.rhcloud.com/nexus/content/repositories/releases/</url>
+        </repository>
+    </distributionManagement>
+    
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>3.8.1</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+    
+    <modules>
+
+        <!--
+        <module>../../j2me/AllBinaryJ2MELibraryOberonP</module>
+        -->
+        <!--
+        <module>../data/DataJavaLibraryOberonM</module>
+        -->
+
+        <module>../licensing/TestServiceClientInfoJavaLibraryOberonM</module>        
+
+        <module>../data/DataTableInterfacesOberonM</module>
+        
+        <module>../QueueJavaLibraryOberonM</module>
+        
+        <!--
+        <module>../TokenizerJavaLibraryOberonM</module>
+        -->
+
+        <module>../logging/LogConfigTypeFreeblisketJavaLibraryOberonM</module>
+
+        <module>../JavaUtilLibraryOberonM</module>
+        <module>../NullInitInfoJavaLibraryOberonM</module>        
+        <module>../InitInfoJavaLibraryOberonM</module>
+        <module>../PreLoaderHttpJavaLibraryOberonM</module>
+        
+        <module>../TagsBaseJavaLibraryOberonM</module>
+        <module>../CustomLoaderJavaLibraryOberonM</module>
+        
+        <!--
+        <module>../logic/data/file/FileJ2SEJavaLibraryOberonM</module>
+        <module>../logic/data/file/FileJavaLibraryOberonM</module>
+        -->
+
+        <module>../data/SQLAllBinaryJavaLibraryOberonM</module>
+
+        <!--
+        <module>../licensing/FileLicenseInitInfoJavaLibraryOberonM</module>
+        -->
+
+        <module>../DocumentObjectModelJavaLibraryOberonM</module>
+
+        <module>../VisualStyleJavaLibraryOberonM</module>
+
+        <module>../ConfigurationJavaLibraryOberonM</module>
+
+        <module>../VisualTransformBaseJavaLibraryOberonM</module>
+
+        <module>../CategoryBaseJavaLibraryOberonM</module>
+        <module>../CategoryJavaLibraryOberonM</module>
+
+        <module>../UserJavaLibraryOberonM</module>
+
+        <module>../PaymentGatewayBaseJavaLibraryOberonM</module>
+
+        <module>../data/vo/EntitiesBlisketVOJavaLibraryOberonM</module>
+        <module>../PaymentGatewayJavaLibraryOberonM</module>
+        <module>../data/vo/EntitiesOrderHistoryVOJavaLibraryOberonM</module>
+        <module>../data/vo/EntityPaymentGatewayVOJavaLibraryOberonM</module>
+        <module>../data/vo/EntityStoreFrontVOJavaLibraryOberonM</module>
+
+        <module>../data/EntitiesBlisketBaseInterfacesJavaLibraryOberonM</module>
+        <module>../data/EntitiesBlisketBaseJavaLibraryOberonM</module>
+        
+        <module>../data/EntitiesAdvertisementBaseJavaLibraryOberonM</module>
+        <module>../data/EntityOrderHistoryJavaLibraryOberonM</module>
+        <module>../data/EntityPaymentGatewayJavaLibraryOberonM</module>
+        <module>../data/EntityVisualTransformJavaLibraryOberonM</module>
+        <module>../data/EntityUserJavaLibraryOberonM</module>
+        <module>../data/EntityWorkflowJavaLibraryOberonM</module>
+
+        <module>../SMTPConfigurationJavaLibraryOberonM</module>
+        <module>../SMTPBaseJavaLibraryOberonM</module>
+
+        <module>../VisualTransformJavaLibraryOberonM</module>
+
+        <module>../../replace_these_stub_projects/allbinary_src/YourRuntimeEnvironmentJavaLibraryOberonM</module>
+        <module>../GatewayJavaLibraryOberonM</module>
+        
+        <module>../WorkflowBaseJavaLibraryOberonM</module>
+        <module>../WorkflowJavaLibraryOberonM</module>
+
+        <module>../IdGeneratorUsingFilesJavaLibraryOberonM</module>
+        <module>../BlisketPreVOJavaLibraryOberonM</module>
+
+        <!-- 
+        EntitiesOrderHistoryVOJavaLibrary
+        UserJavaLibrary
+        -->
+        
+        <module>../BlisketVOJavaLibraryOberonM</module>
+
+        <module>../UserCommerceJavaLibraryOberonM</module>
+
+        <module>../CustomizerValidatorsJavaLibraryOberonM</module>
+
+        <!-- 
+        AllBinaryCacheForShiftOneJavaLibrary
+        AllBinaryJSECacheJavaLibrary
+        ColorJavaLibrary
+        ImageJavaLibrary
+        -->
+        
+        <module>../logic/data/file/FileMediaJ2SEJavaLibraryOberonM</module>
+        <module>../BlisketBaseJavaLibraryOberonM</module>
+
+        <module>../logging/LoggingGAEAllOberonM</module>
+        <module>../BlisketJavaLibraryOberonM</module>
+        
+    </modules>
+
+</project>
+

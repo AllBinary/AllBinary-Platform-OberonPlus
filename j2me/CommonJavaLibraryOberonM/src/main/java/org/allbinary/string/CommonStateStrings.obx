@@ -1,0 +1,62 @@
+(* Generated Code Do Not Modify package org.allbinary.string *)
+MODULE CommonStateStrings;
+
+IMPORT JR;
+
+TYPE
+  CommonStateStrings* = POINTER TO RECORD (JR.JObject)
+    f_CONTEXT*: JR.String
+    f_FINISH*: JR.String
+    f_CREATE*: JR.String
+    f_START*: JR.String
+    f_RESTART*: JR.String
+    f_RESUME*: JR.String
+    f_PAUSE*: JR.String
+    f_STOP*: JR.String
+    f_DESTROY*: JR.String
+    f_BIND*: JR.String
+    f_ON_SAVE_INSTANCE_STATE*: JR.String
+    f_ON_START_COMMAND*: JR.String
+  END
+
+VAR
+  jcell_instance: CommonStateStrings
+  jset_instance: BOOLEAN
+
+PROCEDURE jstatic_instance*(): CommonStateStrings;
+BEGIN
+    IF ~jset_instance THEN
+      jset_instance := TRUE
+      jcell_instance := jnew_0()
+    END
+    RETURN jcell_instance
+END jstatic_instance;
+
+PROCEDURE jnew_0*(): CommonStateStrings;
+  VAR
+    this: CommonStateStrings
+BEGIN
+    NEW(this)
+    this.jclass := JR.str("CommonStateStrings")
+    this.f_CONTEXT := JR.str("Context: ")
+    this.f_FINISH := JR.str("finish")
+    this.f_CREATE := JR.str("onCreate")
+    this.f_START := JR.str("onStart")
+    this.f_RESTART := JR.str("onRestart")
+    this.f_RESUME := JR.str("onResume")
+    this.f_PAUSE := JR.str("onPause")
+    this.f_STOP := JR.str("onStop")
+    this.f_DESTROY := JR.str("onDestroy")
+    this.f_BIND := JR.str("onBind")
+    this.f_ON_SAVE_INSTANCE_STATE := JR.str("onSaveInstanceState")
+    this.f_ON_START_COMMAND := JR.str("onStartCommand")
+    RETURN this
+END jnew_0;
+
+PROCEDURE jm_getInstance_0*(): CommonStateStrings;
+BEGIN
+        RETURN jstatic_instance()
+END jm_getInstance_0;
+
+END CommonStateStrings.
+

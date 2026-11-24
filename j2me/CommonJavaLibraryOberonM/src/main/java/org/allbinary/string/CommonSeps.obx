@@ -1,0 +1,102 @@
+(* Generated Code Do Not Modify package org.allbinary.string *)
+MODULE CommonSeps;
+
+IMPORT JR, StringMaker;
+
+TYPE
+  CommonSeps* = POINTER TO RECORD (JR.JObject)
+    f_NEW_LINE*: JR.String
+    f_SEMICOLON*: JR.String
+    f_EQUALS*: JR.String
+    f_SPACE*: JR.String
+    f_COMMA*: JR.String
+    f_COLON*: JR.String
+    f_PERIOD*: JR.String
+    f_UNDERSCORE*: JR.String
+    f_COLON_SEP*: JR.String
+    f_COMMA_SEP*: JR.String
+    f_PARENTHESIS_OPEN*: JR.String
+    f_PARENTHESIS_CLOSE*: JR.String
+    f_BRACE_OPEN*: JR.String
+    f_BRACE_CLOSE*: JR.String
+    f_BRACKET_OPEN*: JR.String
+    f_BRACKET_CLOSE*: JR.String
+    f_DASH*: JR.String
+    f_PERCENT*: JR.String
+    f_AMPERSAND*: JR.String
+    f_FORWARD_SLASH*: JR.String
+    f_BACK_SLASH*: JR.String
+    f_QUESTION*: JR.String
+    f_QUOTE*: JR.String
+    f_QUOTE_END*: JR.String
+    f_COMMENT*: JR.String
+    f_INDENT*: JR.String
+  END
+
+VAR
+  jcell_instance: CommonSeps
+  jset_instance: BOOLEAN
+
+PROCEDURE jstatic_instance*(): CommonSeps;
+BEGIN
+    IF ~jset_instance THEN
+      jset_instance := TRUE
+      jcell_instance := jnew_0()
+    END
+    RETURN jcell_instance
+END jstatic_instance;
+
+PROCEDURE jnew_0*(): CommonSeps;
+  VAR
+    this: CommonSeps
+    jtemp1: StringMaker.StringMaker
+    jtemp2: StringMaker.StringMaker
+    jtemp3: StringMaker.StringMaker
+    jtemp4: StringMaker.StringMaker
+    jtemp5: StringMaker.StringMaker
+    jtemp6: StringMaker.StringMaker
+BEGIN
+    NEW(this)
+    this.jclass := JR.str("CommonSeps")
+    this.f_NEW_LINE := JR.unescape("\n")
+    this.f_SEMICOLON := JR.str(";")
+    this.f_EQUALS := JR.str("=")
+    this.f_SPACE := JR.str(" ")
+    this.f_COMMA := JR.str(",")
+    this.f_COLON := JR.str(":")
+    this.f_PERIOD := JR.str(".")
+    this.f_UNDERSCORE := JR.str("_")
+    jtemp3 := StringMaker.jnew_0()
+    jtemp2 := jtemp3.jm_append_1(this.f_COLON)
+    jtemp1 := jtemp2.jm_append_1(this.f_SPACE)
+    this.f_COLON_SEP := jtemp1.jm_toString_0()
+    jtemp6 := StringMaker.jnew_0()
+    jtemp5 := jtemp6.jm_append_1(this.f_COMMA)
+    jtemp4 := jtemp5.jm_append_1(this.f_SPACE)
+    this.f_COMMA_SEP := jtemp4.jm_toString_0()
+    this.f_PARENTHESIS_OPEN := JR.str("(")
+    this.f_PARENTHESIS_CLOSE := JR.str(")")
+    this.f_BRACE_OPEN := JR.str("{")
+    this.f_BRACE_CLOSE := JR.str("}")
+    this.f_BRACKET_OPEN := JR.str("[")
+    this.f_BRACKET_CLOSE := JR.str("]")
+    this.f_DASH := JR.str("-")
+    this.f_PERCENT := JR.str("%")
+    this.f_AMPERSAND := JR.str("&")
+    this.f_FORWARD_SLASH := JR.str("/")
+    this.f_BACK_SLASH := JR.unescape("\\")
+    this.f_QUESTION := JR.str("?")
+    this.f_QUOTE := JR.str('"')
+    this.f_QUOTE_END := JR.str('",')
+    this.f_COMMENT := JR.str("//")
+    this.f_INDENT := JR.str("    ")
+    RETURN this
+END jnew_0;
+
+PROCEDURE jm_getInstance_0*(): CommonSeps;
+BEGIN
+        RETURN jstatic_instance()
+END jm_getInstance_0;
+
+END CommonSeps.
+

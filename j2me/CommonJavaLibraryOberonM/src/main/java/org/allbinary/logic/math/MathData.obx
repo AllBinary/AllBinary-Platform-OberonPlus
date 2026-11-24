@@ -1,0 +1,58 @@
+(* Generated Code Do Not Modify package org.allbinary.logic.math *)
+MODULE MathData;
+
+IMPORT JR, CommonPhoneStrings, CommonSeps;
+
+TYPE
+  MathData* = POINTER TO RECORD (JR.JObject)
+    f_EQUALS*: JR.String
+    f_PLUS*: JR.String
+    f_GREATER_THAN*: JR.String
+    f_MINUS*: JR.String
+    f_DIVIDE*: JR.String
+    f_MULTIPLY*: JR.String
+  END
+
+VAR
+  jcell_instance: MathData
+  jset_instance: BOOLEAN
+
+PROCEDURE jstatic_instance*(): MathData;
+BEGIN
+    IF ~jset_instance THEN
+      jset_instance := TRUE
+      jcell_instance := jnew_0()
+    END
+    RETURN jcell_instance
+END jstatic_instance;
+
+PROCEDURE jnew_0*(): MathData;
+  VAR
+    this: MathData
+    j_commonSeps: CommonSeps.CommonSeps
+    jtemp1: CommonPhoneStrings.CommonPhoneStrings
+BEGIN
+    NEW(this)
+    this.jclass := JR.str("MathData")
+    
+    this.f_PLUS := JR.str("+")
+    this.f_GREATER_THAN := JR.str(">")
+    
+    
+    
+        j_commonSeps := CommonSeps.jm_getInstance_0()
+        this.f_EQUALS := j_commonSeps.f_EQUALS
+        this.f_MINUS := j_commonSeps.f_DASH
+        this.f_DIVIDE := j_commonSeps.f_FORWARD_SLASH
+        jtemp1 := CommonPhoneStrings.jm_getInstance_0()
+        this.f_MULTIPLY := jtemp1.f_STAR
+    RETURN this
+END jnew_0;
+
+PROCEDURE jm_getInstance_0*(): MathData;
+BEGIN
+        RETURN jstatic_instance()
+END jm_getInstance_0;
+
+END MathData.
+

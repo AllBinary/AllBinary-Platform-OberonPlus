@@ -1,0 +1,90 @@
+{
+ 
+  AllBinary Open License Version 1 
+  Copyright (c) 2022 AllBinary 
+   
+  By agreeing to this license you and any business entity you represent are 
+  legally bound to the AllBinary Open License Version 1 legal agreement. 
+   
+  You may obtain the AllBinary Open License Version 1 legal agreement from 
+  AllBinary or the root directory of AllBinary's AllBinary Platform repository. 
+   
+  Created By: Travis Berthelot 
+    
+}
+// Generated Code Do Not Modify
+// package org.allbinary.time
+unit GameTickTimeDelayHelper;
+
+{$mode delphi}{$H+}
+{$interfaces corba}
+{$modeswitch typehelpers}
+
+interface
+
+uses
+  SysUtils, Classes, Math, DateUtils, StrUtils, Character, JavaLang, JavaUtil, JavaIo, JavaNio, JavaAwtEvent, JavaNet, JavaSecurity, JavaxCrypto;
+
+type
+  {AB:TYPES}
+  TGameTickTimeDelayHelper = class(TObject)
+  public
+    timeDelta: Int64;
+    startTime: Int64;
+    lastStartTime: Int64;
+    procedure InitFields;
+        constructor Create(startTime: Int64);
+        function setStartTime: Int64; virtual;
+        procedure loop; virtual;
+        function getTimeFromStart: Int64; virtual;
+  end;
+
+implementation
+
+{AB:CODE}
+
+procedure TGameTickTimeDelayHelper.InitFields;
+begin
+  
+  
+  
+end;
+    
+
+constructor TGameTickTimeDelayHelper.Create(startTime: Int64);
+begin
+    inherited Create;
+    InitFields;
+        Self.startTime := startTime;
+        Self.lastStartTime := 0;
+end;
+    
+
+function TGameTickTimeDelayHelper.setStartTime: Int64;
+begin
+        Self.startTime := DateTimeToUnix(Now) * 1000;
+        Exit(Self.startTime);
+end;
+    
+
+procedure TGameTickTimeDelayHelper.loop;
+begin
+        if (Self.lastStartTime) = (Low(Int64)) then begin
+            Self.timeDelta := 0;
+        end else begin
+            Self.timeDelta := (DateTimeToUnix(Now) * 1000) - (Self.lastStartTime);
+        end;
+end;
+    
+
+function TGameTickTimeDelayHelper.getTimeFromStart: Int64;
+begin
+        Exit((Self.startTime) - (Self.lastStartTime));
+end;
+
+initialization
+  {AB:INITIALIZATION}
+  {AB:END}
+
+end.
+

@@ -1,0 +1,192 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.allbinary</groupId>
+  <artifactId>GameJ2MELibraryPOMOberon</artifactId>
+  <packaging>pom</packaging>
+  <!-- AllBinary Platform Version Start -->
+  <version>1.0.0-SNAPSHOT</version>
+  <!-- AllBinary Platform Version End -->
+
+  <name>GameJ2MELibraryPOMOberon</name>
+  <url>http://www.allbinary.com/</url>
+    <distributionManagement>
+        <snapshotRepository>
+            <id>nexus-snapshots</id>
+            <name>AllBinary Snapshots Nexus</name>
+            <url>https://nexus-allbinary.rhcloud.com/nexus/content/repositories/snapshots/</url>
+        </snapshotRepository>
+        <repository>
+            <id>nexus-releases</id>
+            <name>AllBinary Releases Nexus</name>
+            <url>https://nexus-allbinary.rhcloud.com/nexus/content/repositories/releases/</url>
+        </repository>
+    </distributionManagement>
+
+
+
+    <modules>
+
+        <!--
+        NoGyroSensorLibrary
+
+        -->
+        <!--<module>../../android/AndroidUtilJavaLibraryOberonM</module>-->
+
+        <module>../../../allbinary_src/security/SimpleCryptLibraryOberonM</module>
+        <!--
+        <module>../../../../working_thirdpartyoberon/security/BouncyCastleDESJavaLibraryOberonM</module>
+        <module>../../../../working_thirdpartyoberon/communication/XmlRpc/XmlRpcJavaLibraryOberonM</module>
+        -->
+        <module>../../../allbinary_src/TokenizerJavaLibraryOberonM</module>
+        <module>../../../allbinary_src/security/BasicSecurityJavaLibraryOberonM</module>
+        <!--<module>../../../replace_these_stub_projects/security/YourCryptFileJavaLibraryOberonM</module>-->
+        <module>../../../replace_these_stub_projects/security/YourSecurityJavaLibraryOberonM</module>
+        <module>../../../replace_these_stub_projects/communication/YourXmlRpcJavaLibraryOberonM</module>
+        <!--<module>../../../replace_these_stub_projects/allbinary_src/J2MEOnlyJavaLibraryOberonM</module>-->
+        <module>../../../replace_these_stub_projects/allbinary_src/J2MECompatibilityJavaLibraryOberonM</module>
+        <module>../../../replace_these_stub_projects/allbinary_src/J2MEJsInteropCompatibilityJavaLibraryOberonM</module>
+
+        <module>../../DebugJavaLibraryOberonM</module>             
+        <module>../../ResourceLibraryOberonM</module>
+        <module>../../ResourceJ2MEJavaLibraryOberonM</module>
+        <!--<module>../../AndroidResourceLibraryOberonM</module>-->
+        <!--<module>../../../allbinary_src/hardware/AndroidSystemJavaLibraryOberonM</module>-->
+
+        <module>../../../game/behavior/ArtificialIntelligenceLibraryOberonM</module>
+
+        <module>../../media/graphics/PlatformNullImageJavaLibraryOberonM</module>
+        <module>../../media/graphics/ImageCacheBaseJ2MEJavaLibraryOberonM</module>
+        <module>../../media/graphics/ImageCacheJ2MEJavaLibraryOberonM</module>
+        <module>../../../graphics/opengl/OpenGLJ2MENoneJavaLibraryOberonM</module>
+        <module>../../../graphics/opengl/OpenGLNoneJavaLibraryOberonM</module>
+        <module>../../../graphics/opengl/OpenGLNoneOtherJavaLibraryOberonM</module>
+        <module>../../../graphics/opengl/OpenGLNoneOther2JavaLibraryOberonM</module>
+        <module>../../../graphics/opengl/OpenGLESBaseJ2MEJavaLibraryOberonM</module>
+
+        <module>../../media/graphics/animation/AnimationLibraryOberonM</module>
+        <module>../../media/graphics/animation/RotationAnimationJavaLibraryOberonM</module>
+
+        <module>../../games/GameInputLibraryOberonM</module>
+
+        <module>../../games/GameScoresBaseJavaLibraryOberonM</module>
+        <module>../../games/GameScoresBaseJ2MELibraryOberonM</module>
+
+        <module>../../statistics/ApplicationStatisticsHTMLLibraryOberonM</module>
+        <!--
+        <module>../../games/GameConfigurationHTMLJavaLibraryOberonM</module>
+        -->
+        <module>../../games/GameConfigurationJ2MEJavaLibraryOberonM</module>   
+        <module>../../games/GameConfigurationJavaLibraryOberonM</module>
+
+        <module>../../games/GameIntermissionLibraryOberonM</module>
+
+        <module>../../GroupLibraryOberonM</module>
+
+        <module>../../input/NoSensorJavaLibraryOberonM</module>
+
+        <module>../../input/AllBinarySensorJavaLibraryOberonM</module>
+
+        <module>../../input/platform/me/GameInputMEJavaLibraryOberonM</module>
+        <module>../../input/platform/me/GameInputMEKeyOnlyJavaLibraryOberonM</module>
+        <module>../../input/platform/me/GameInputMEMotionJavaLibraryOberonM</module>
+        <module>../../input/platform/pc/GameInputPCBaseJavaLibraryOberonM</module>
+        <module>../../input/platform/pc/GameInputPCJavaLibraryOberonM</module>
+        <module>../../input/platform/pc/GameInputPCKeyOnlyJavaLibraryOberonM</module>
+        <module>../../input/platform/pc/GameInputPCMotionJavaLibraryOberonM</module>
+        <module>../../input/platform/pc/GameInputSwtJavaLibraryOberonM</module>
+
+        <module>../../input/AllBinaryGyroSensorJavaLibraryOberonM</module>
+        <module>../../input/MotionGestureJavaLibraryOberonM</module>
+        
+        <module>../../input/MotionGestureBaseJavaLibraryOberonM</module>
+
+        <module>../../games/GameInputPersistanceLibraryOberonM</module>
+        <module>../../games/GameInputNoPersistanceLibraryOberonM</module>
+        
+        <module>../../lib/VectorThreeDimensionalLibraryOberonM</module>
+        <module>../../input/AllBinaryAccelerometerSensorJavaLibraryOberonM</module>
+        <module>../../input/NoGyroSensorJavaLibraryOberonM</module>
+        <module>../../input/JSEGyroSensorJavaLibraryOberonM</module>
+        <!--
+        <module>../../input/android/</module>
+        <module>../../input/platform/android/GameInputAndroidBaseJavaLibraryOberonM</module>
+        -->
+
+        <module>../../media/sound/BasicPlayerJavaLibraryOberonM</module>
+        <module>../../media/sound/BasicPlayerMIDP2JavaLibraryOberonM</module>
+        <module>../../media/sound/NoPlayerJavaLibraryOberonM</module>
+        <module>../../media/sound/SoundJ2MELibraryOberonM</module>
+
+        <module>../../media/motion/AllBinaryVibrationJavaLibraryOberonM</module>
+        <module>../../media/motion/NoVibrateJavaLibraryOberonM</module>
+        <!--<module>../../media/motion/VibrateAndroidJavaLibraryOberonM</module>-->
+
+        <module>../../media/graphics/NullCustomUIJavaLibraryOberonM</module>
+        <module>../../media/graphics/NullCustomUIBaseJavaLibraryOberonM</module>
+
+        <module>../../media/graphics/FormValidationJavaLibraryOberonM</module>
+        
+        <module>../../media/graphics/FormJavaLibraryOberonM</module>
+        <module>../../media/graphics/FormBaseJavaLibraryOberonM</module>
+        <!--
+        <module>../../media/graphics/FormJMEJavaLibraryOberonM</module>
+        -->
+        <module>../../../j2me/media/graphics/FormJMEJavaLibraryOberonM</module>
+
+        <module>../../media/graphics/animation/AnimationResourceJavaLibraryOberonM</module>
+        <module>../../media/graphics/animation/TransitionAnimationJavaLibraryOberonM</module>
+        <module>../../media/graphics/animation/NoTransitionAnimationJavaLibraryOberonM</module>
+        <!--
+        AndroidTransitionAnimationJavaLibraryM
+        -->
+        <module>../../media/graphics/animation/GameAnimationJavaLibraryOberonM</module>
+        <module>../../games/GameResourceJavaLibraryOberonM</module>
+        <module>../../games/GameSoundsJavaLibraryOberonM</module>
+
+        <module>../../input/TouchInputLibraryOberonP</module>
+
+        <module>../../media/MediaDataOberonM</module>
+        <module>../../media/sound/NotDeviceSpecificNoMediaMIDP1LibraryOberonM</module>
+
+        <module>../../../allbinary_src/content/ContentNoneJavaLibraryOberonM</module>
+        <!--<module>../../../allbinary_src/content/ContentAndroidJavaLibraryOberonM</module>-->
+
+        <module>../../games/GameConfigurationFormJavaLibraryOberonM</module>
+
+        <module>../../FullScreenNoneJavaLibraryOberonM</module>
+        <!--
+        <module>../../FullScreenJavaLibraryOberonM</module>
+        -->
+
+        <module>../../../physics/VelocityLibraryOberonM</module>
+
+        <module>../../games/weapon/SoundsBasicWeaponsJavaLibraryOberonM</module>
+
+        <module>../../lib/TrigJ2MELibraryOberonM</module>
+
+        <module>../../media/graphics/geography/map/LayerPlacementLibraryOberonM</module>
+        <module>../../media/graphics/layer/AllBinaryLayerJavaLibraryOberonM</module>
+
+        <module>../../ScreenCaptureNoneJavaLibraryOberonM</module>
+        
+        <module>../licensing/GameLicensingNullJavaLibraryOberonM</module>
+        
+        <module>../../business/advertisement/AllBinaryAdvertisementClientJavaLibraryOberonM</module>
+        <module>../../business/advertisement/AdvertisementClientNoneJavaLibraryOberonM</module>
+
+        <module>../GameNotificationJavaLibraryOberonM</module>
+
+        <module>../../../graphics/opengl/NoSWTJavaLibraryOberonM</module>
+        <module>../../../graphics/opengl/SWTWithoutJOGLJavaLibraryOberonM</module>
+        <module>../SWTJavaLibraryOberonM</module>
+        <module>../GameJ2MELibraryOberonM</module>
+        
+        <!--
+        <module>../GameJ2MEOptionalLibraryPOOberonM</module>
+        -->
+    
+    </modules>
+
+</project>
+

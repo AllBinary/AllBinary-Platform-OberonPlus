@@ -1,0 +1,52 @@
+{
+
+  AllBinary Open License Version 1
+  Copyright (c) 2011 AllBinary
+  
+  By agreeing to this license you and any business entity you represent are
+  legally bound to the AllBinary Open License Version 1 legal agreement.
+  
+  You may obtain the AllBinary Open License Version 1 legal agreement from
+  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+  
+  Created By: Travis Berthelot
+   
+}
+// Generated Code Do Not Modify
+// package org.allbinary.business.user.commerce.money.payment.gateway.modules.processor.echo.response
+unit EchoResponseTypeOneData;
+
+{$mode delphi}{$H+}
+{$interfaces corba}
+{$modeswitch typehelpers}
+
+interface
+
+uses
+  SysUtils, Classes, Math, DateUtils, StrUtils, Character, JavaLang, JavaUtil, JavaIo, JavaNio, JavaAwtEvent, JavaNet, JavaSecurity, JavaxCrypto;
+
+type
+  {AB:TYPES}
+  TEchoResponseTypeOneData = class(TObject)
+  public
+    class var NAME: string;
+        constructor Create;
+  end;
+
+implementation
+
+{AB:CODE}
+    
+
+constructor TEchoResponseTypeOneData.Create;
+begin
+    inherited Create;
+end;
+
+initialization
+  {AB:INITIALIZATION}
+  TEchoResponseTypeOneData.NAME := 'ECHOTYPE1';
+  {AB:END}
+
+end.
+

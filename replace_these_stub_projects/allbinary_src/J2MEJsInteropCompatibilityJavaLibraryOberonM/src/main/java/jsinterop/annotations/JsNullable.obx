@@ -1,0 +1,6 @@
+(* Generated Code Do Not Modify package jsinterop.annotations *)
+MODULE JsNullable;
+(* Java annotation JsNullable: annotations have no Oberon+ form *)
+
+END JsNullable.
+

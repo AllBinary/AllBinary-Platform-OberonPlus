@@ -1,0 +1,58 @@
+(* Generated Code Do Not Modify package org.allbinary.logic *)
+MODULE NullUtil;
+
+IMPORT JR;
+
+TYPE
+  NullUtil* = POINTER TO RECORD (JR.JObject)
+    f_NULL_OBJECT*: JR.JObject
+    f_NULL_CLASS*: JR.String
+    f_NULL_OBJECT_ARRAY*: JR.RefArray
+    f_NULL_CHAR_ARRAY*: JR.IntArray
+    f_NULL_BYTE_ARRAY*: JR.IntArray
+    f_NULL_SHORT_ARRAY_ARRAY*: JR.IntArray2
+    f_NULL_INT_ARRAY*: JR.IntArray
+    f_NULL_INT_ARRAY_ARRAY*: JR.IntArray2
+    f_NULL_INT_ARRAY_ARRAY_ARRAY*: JR.IntArray3
+    f_NULL_FLOAT_ARRAY*: JR.FloatArray
+  END
+
+VAR
+  jcell_instance: NullUtil
+  jset_instance: BOOLEAN
+
+PROCEDURE jstatic_instance*(): NullUtil;
+BEGIN
+    IF ~jset_instance THEN
+      jset_instance := TRUE
+      jcell_instance := jnew_0()
+    END
+    RETURN jcell_instance
+END jstatic_instance;
+
+PROCEDURE jnew_0*(): NullUtil;
+  VAR
+    this: NullUtil
+BEGIN
+    NEW(this)
+    this.jclass := JR.str("NullUtil")
+    this.f_NULL_OBJECT := JR.newJObject("Object")
+    this.f_NULL_CLASS := JR.className(this.f_NULL_OBJECT)
+    this.f_NULL_OBJECT_ARRAY := JR.newRefArray(0)
+    this.f_NULL_CHAR_ARRAY := JR.newIntArray(0)
+    this.f_NULL_BYTE_ARRAY := JR.newIntArray(0)
+    this.f_NULL_SHORT_ARRAY_ARRAY := JR.newIntArray2(0, 0)
+    this.f_NULL_INT_ARRAY := JR.newIntArray(0)
+    this.f_NULL_INT_ARRAY_ARRAY := JR.newIntArray2(0, 0)
+    this.f_NULL_INT_ARRAY_ARRAY_ARRAY := JR.newIntArray3(0, 0, 0)
+    this.f_NULL_FLOAT_ARRAY := JR.newFloatArray(0)
+    RETURN this
+END jnew_0;
+
+PROCEDURE jm_getInstance_0*(): NullUtil;
+BEGIN
+        RETURN jstatic_instance()
+END jm_getInstance_0;
+
+END NullUtil.
+
